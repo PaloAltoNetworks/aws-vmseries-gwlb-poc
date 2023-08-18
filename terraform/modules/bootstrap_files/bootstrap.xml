@@ -1,0 +1,1670 @@
+<?xml version="1.0"?>
+<config version="10.2.0" urldb="paloaltonetworks">
+  <devices>
+    <entry name="localhost.localdomain">
+      <network>
+        <logical-router>
+          <entry name="vmseries-default-router">
+            <vrf>
+              <entry name="default">
+                <ecmp>
+                  <symmetric-return>no</symmetric-return>
+                  <strict-source-path>no</strict-source-path>
+                  <enable>no</enable>
+                  <max-path>2</max-path>
+                </ecmp>
+                <bgp>
+                  <med>
+                    <always-compare-med>no</always-compare-med>
+                    <deterministic-med-comparison>yes</deterministic-med-comparison>
+                  </med>
+                  <graceful-restart>
+                    <stale-route-time>120</stale-route-time>
+                    <max-peer-restart-time>120</max-peer-restart-time>
+                    <enable>yes</enable>
+                    <local-restart-time>120</local-restart-time>
+                  </graceful-restart>
+                  <global-bfd>
+                    <profile>None</profile>
+                  </global-bfd>
+                  <install-route>no</install-route>
+                  <ecmp-multi-as>no</ecmp-multi-as>
+                  <enforce-first-as>yes</enforce-first-as>
+                  <fast-external-failover>yes</fast-external-failover>
+                  <enable>no</enable>
+                  <default-local-preference>100</default-local-preference>
+                  <graceful-shutdown>no</graceful-shutdown>
+                  <always-advertise-network-route>yes</always-advertise-network-route>
+                </bgp>
+                <ospfv3>
+                  <global-bfd>
+                    <profile>None</profile>
+                  </global-bfd>
+                  <graceful-restart>
+                    <enable>yes</enable>
+                    <grace-period>120</grace-period>
+                    <helper-enable>yes</helper-enable>
+                    <strict-LSA-checking>yes</strict-LSA-checking>
+                    <max-neighbor-restart-time>140</max-neighbor-restart-time>
+                  </graceful-restart>
+                  <enable>no</enable>
+                  <disable-transit-traffic>no</disable-transit-traffic>
+                </ospfv3>
+                <rip>
+                  <global-bfd>
+                    <profile>None</profile>
+                  </global-bfd>
+                  <enable>no</enable>
+                  <default-information-originate>no</default-information-originate>
+                </rip>
+                <ospf>
+                  <global-bfd>
+                    <profile>None</profile>
+                  </global-bfd>
+                  <graceful-restart>
+                    <enable>yes</enable>
+                    <grace-period>120</grace-period>
+                    <helper-enable>yes</helper-enable>
+                    <strict-LSA-checking>yes</strict-LSA-checking>
+                    <max-neighbor-restart-time>140</max-neighbor-restart-time>
+                  </graceful-restart>
+                  <enable>no</enable>
+                  <rfc1583>no</rfc1583>
+                </ospf>
+                <admin-dists>
+                  <ospf-intra>110</ospf-intra>
+                  <ospf-inter>110</ospf-inter>
+                  <ospf-ext>110</ospf-ext>
+                  <ospfv3-intra>110</ospfv3-intra>
+                  <ospfv3-inter>110</ospfv3-inter>
+                  <ospfv3-ext>110</ospfv3-ext>
+                  <bgp-internal>200</bgp-internal>
+                  <bgp-external>20</bgp-external>
+                  <bgp-local>20</bgp-local>
+                  <rip>120</rip>
+                  <static>10</static>
+                  <static-ipv6>10</static-ipv6>
+                </admin-dists>
+              </entry>
+            </vrf>
+          </entry>
+          <entry name="vr1">
+            <vrf>
+              <entry name="default">
+                <ecmp>
+                  <symmetric-return>no</symmetric-return>
+                  <strict-source-path>no</strict-source-path>
+                  <enable>no</enable>
+                  <max-path>2</max-path>
+                </ecmp>
+                <bgp>
+                  <med>
+                    <always-compare-med>no</always-compare-med>
+                    <deterministic-med-comparison>yes</deterministic-med-comparison>
+                  </med>
+                  <graceful-restart>
+                    <stale-route-time>120</stale-route-time>
+                    <max-peer-restart-time>120</max-peer-restart-time>
+                    <enable>yes</enable>
+                    <local-restart-time>120</local-restart-time>
+                  </graceful-restart>
+                  <global-bfd>
+                    <profile>None</profile>
+                  </global-bfd>
+                  <install-route>no</install-route>
+                  <ecmp-multi-as>no</ecmp-multi-as>
+                  <enforce-first-as>yes</enforce-first-as>
+                  <fast-external-failover>yes</fast-external-failover>
+                  <enable>no</enable>
+                  <default-local-preference>100</default-local-preference>
+                  <graceful-shutdown>no</graceful-shutdown>
+                  <always-advertise-network-route>yes</always-advertise-network-route>
+                </bgp>
+                <ospfv3>
+                  <global-bfd>
+                    <profile>None</profile>
+                  </global-bfd>
+                  <graceful-restart>
+                    <enable>yes</enable>
+                    <grace-period>120</grace-period>
+                    <helper-enable>yes</helper-enable>
+                    <strict-LSA-checking>yes</strict-LSA-checking>
+                    <max-neighbor-restart-time>140</max-neighbor-restart-time>
+                  </graceful-restart>
+                  <enable>no</enable>
+                  <disable-transit-traffic>no</disable-transit-traffic>
+                </ospfv3>
+                <rip>
+                  <global-bfd>
+                    <profile>None</profile>
+                  </global-bfd>
+                  <enable>no</enable>
+                  <default-information-originate>no</default-information-originate>
+                </rip>
+                <ospf>
+                  <global-bfd>
+                    <profile>None</profile>
+                  </global-bfd>
+                  <graceful-restart>
+                    <enable>yes</enable>
+                    <grace-period>120</grace-period>
+                    <helper-enable>yes</helper-enable>
+                    <strict-LSA-checking>yes</strict-LSA-checking>
+                    <max-neighbor-restart-time>140</max-neighbor-restart-time>
+                  </graceful-restart>
+                  <enable>no</enable>
+                  <rfc1583>no</rfc1583>
+                </ospf>
+                <admin-dists>
+                  <ospf-intra>110</ospf-intra>
+                  <ospf-inter>110</ospf-inter>
+                  <ospf-ext>110</ospf-ext>
+                  <ospfv3-intra>110</ospfv3-intra>
+                  <ospfv3-inter>110</ospfv3-inter>
+                  <ospfv3-ext>110</ospfv3-ext>
+                  <bgp-internal>200</bgp-internal>
+                  <bgp-external>20</bgp-external>
+                  <bgp-local>20</bgp-local>
+                  <rip>120</rip>
+                  <static>10</static>
+                  <static-ipv6>10</static-ipv6>
+                </admin-dists>
+              </entry>
+            </vrf>
+          </entry>
+        </logical-router>
+        <profiles>
+          <interface-management-profile>
+            <entry name="vmseries-interface-mgmt-profile">
+              <http>yes</http>
+              <https>yes</https>
+            </entry>
+            <entry name="BasicProfile">
+              <http>yes</http>
+              <https>yes</https>
+            </entry>
+          </interface-management-profile>
+          <monitor-profile>
+            <entry name="default">
+              <interval>3</interval>
+              <threshold>5</threshold>
+              <action>wait-recover</action>
+            </entry>
+          </monitor-profile>
+        </profiles>
+        <interface>
+          <ethernet>
+            <entry name="ethernet1/1">
+              <layer3>
+                <ndp-proxy>
+                  <enabled>no</enabled>
+                </ndp-proxy>
+                <sdwan-link-settings>
+                  <upstream-nat>
+                    <enable>no</enable>
+                    <static-ip/>
+                  </upstream-nat>
+                  <enable>no</enable>
+                </sdwan-link-settings>
+                <interface-management-profile>vmseries-interface-mgmt-profile</interface-management-profile>
+                <lldp>
+                  <enable>no</enable>
+                </lldp>
+                <dhcp-client/>
+              </layer3>
+            </entry>
+          </ethernet>
+        </interface>
+        <virtual-router>
+          <entry name="vmseries-default-router">
+            <interface>
+              <member>ethernet1/1</member>
+            </interface>
+          </entry>
+          <entry name="default">
+            <protocol>
+              <bgp>
+                <enable>no</enable>
+                <dampening-profile>
+                  <entry name="default">
+                    <cutoff>1.25</cutoff>
+                    <reuse>0.5</reuse>
+                    <max-hold-time>900</max-hold-time>
+                    <decay-half-life-reachable>300</decay-half-life-reachable>
+                    <decay-half-life-unreachable>900</decay-half-life-unreachable>
+                    <enable>yes</enable>
+                  </entry>
+                </dampening-profile>
+              </bgp>
+            </protocol>
+          </entry>
+        </virtual-router>
+        <ike>
+          <crypto-profiles>
+            <ike-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                  <member>3des</member>
+                </encryption>
+                <hash>
+                  <member>sha1</member>
+                </hash>
+                <dh-group>
+                  <member>group2</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha256</member>
+                </hash>
+                <dh-group>
+                  <member>group19</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <encryption>
+                  <member>aes-256-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha384</member>
+                </hash>
+                <dh-group>
+                  <member>group20</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+            </ike-crypto-profiles>
+            <ipsec-crypto-profiles>
+              <entry name="default">
+                <esp>
+                  <encryption>
+                    <member>aes-128-cbc</member>
+                    <member>3des</member>
+                  </encryption>
+                  <authentication>
+                    <member>sha1</member>
+                  </authentication>
+                </esp>
+                <dh-group>group2</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <esp>
+                  <encryption>
+                    <member>aes-128-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group19</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <esp>
+                  <encryption>
+                    <member>aes-256-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group20</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+            </ipsec-crypto-profiles>
+            <global-protect-app-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <authentication>
+                  <member>sha1</member>
+                </authentication>
+              </entry>
+            </global-protect-app-crypto-profiles>
+          </crypto-profiles>
+        </ike>
+        <qos>
+          <profile>
+            <entry name="default">
+              <class-bandwidth-type>
+                <mbps>
+                  <class>
+                    <entry name="class1">
+                      <priority>real-time</priority>
+                    </entry>
+                    <entry name="class2">
+                      <priority>high</priority>
+                    </entry>
+                    <entry name="class3">
+                      <priority>high</priority>
+                    </entry>
+                    <entry name="class4">
+                      <priority>medium</priority>
+                    </entry>
+                    <entry name="class5">
+                      <priority>medium</priority>
+                    </entry>
+                    <entry name="class6">
+                      <priority>low</priority>
+                    </entry>
+                    <entry name="class7">
+                      <priority>low</priority>
+                    </entry>
+                    <entry name="class8">
+                      <priority>low</priority>
+                    </entry>
+                  </class>
+                </mbps>
+              </class-bandwidth-type>
+            </entry>
+          </profile>
+        </qos>
+      </network>
+      <vsys>
+        <entry name="vsys1">
+          <zone>
+            <entry name="untrust">
+              <network>
+                <layer3>
+                  <member>ethernet1/1</member>
+                </layer3>
+              </network>
+            </entry>
+          </zone>
+          <import>
+            <network>
+              <interface>
+                <member>ethernet1/1</member>
+              </interface>
+            </network>
+          </import>
+          <application/>
+          <application-group/>
+          <service/>
+          <service-group/>
+          <schedule/>
+          <rulebase>
+            <security>
+              <rules>
+                <entry name="allow-all" uuid="4b0f7676-be64-4007-a31f-b1d6c1ec3dba">
+                  <to loc="shared">
+                    <member loc="shared">any</member>
+                  </to>
+                  <from loc="shared">
+                    <member loc="shared">any</member>
+                  </from>
+                  <source loc="shared">
+                    <member loc="shared">any</member>
+                  </source>
+                  <destination loc="shared">
+                    <member loc="shared">any</member>
+                  </destination>
+                  <source-user loc="shared">
+                    <member loc="shared">any</member>
+                  </source-user>
+                  <category loc="shared">
+                    <member loc="shared">any</member>
+                  </category>
+                  <application loc="shared">
+                    <member loc="shared">any</member>
+                  </application>
+                  <service loc="shared">
+                    <member loc="shared">any</member>
+                  </service>
+                  <source-hip loc="shared">
+                    <member loc="shared">any</member>
+                  </source-hip>
+                  <destination-hip loc="shared">
+                    <member loc="shared">any</member>
+                  </destination-hip>
+                  <action loc="shared">allow</action>
+                  <log-setting loc="shared">IoT Security Default Profile</log-setting>
+                </entry>
+                <entry name="explicit-deny" uuid="fbb7dcca-418b-4c07-908f-874d38b08f1e">
+                  <to loc="shared">
+                    <member loc="shared">any</member>
+                  </to>
+                  <from loc="shared">
+                    <member loc="shared">any</member>
+                  </from>
+                  <source loc="shared">
+                    <member loc="shared">any</member>
+                  </source>
+                  <destination loc="shared">
+                    <member loc="shared">any</member>
+                  </destination>
+                  <source-user loc="shared">
+                    <member loc="shared">any</member>
+                  </source-user>
+                  <category loc="shared">
+                    <member loc="shared">any</member>
+                  </category>
+                  <application loc="shared">
+                    <member loc="shared">any</member>
+                  </application>
+                  <service loc="shared">
+                    <member loc="shared">any</member>
+                  </service>
+                  <source-hip loc="shared">
+                    <member loc="shared">any</member>
+                  </source-hip>
+                  <destination-hip loc="shared">
+                    <member loc="shared">any</member>
+                  </destination-hip>
+                  <action loc="shared">deny</action>
+                  <log-setting loc="shared">IoT Security Default Profile</log-setting>
+                </entry>
+              </rules>
+            </security>
+            <default-security-rules>
+              <rules/>
+            </default-security-rules>
+            <application-override>
+              <rules/>
+            </application-override>
+            <decryption>
+              <rules/>
+            </decryption>
+            <tunnel-inspect>
+              <rules/>
+            </tunnel-inspect>
+            <authentication>
+              <rules/>
+            </authentication>
+            <nat>
+              <rules/>
+            </nat>
+            <qos>
+              <rules/>
+            </qos>
+            <pbf>
+              <rules/>
+            </pbf>
+            <sdwan>
+              <rules/>
+            </sdwan>
+            <network-packet-broker>
+              <rules/>
+            </network-packet-broker>
+            <dos>
+              <rules/>
+            </dos>
+          </rulebase>
+          <address>
+            <entry name="VulnerableAPP" loc="shared">
+              <ip-netmask loc="shared">10.1.1.100</ip-netmask>
+            </entry>
+          </address>
+          <address-group/>
+          <external-list/>
+          <region/>
+          <application-tag/>
+          <application-filter/>
+          <profile-group/>
+          <authentication-object/>
+          <device-object/>
+          <dynamic-user-group/>
+          <tag/>
+          <application-status/>
+          <threats>
+            <vulnerability/>
+            <spyware/>
+          </threats>
+          <profiles>
+            <virus/>
+            <spyware>
+              <entry name="Log4j-Outbound-AntiSpyware" loc="shared">
+                <botnet-domains loc="shared">
+                  <lists loc="shared">
+                    <entry name="default-paloalto-dns" loc="shared">
+                      <action loc="shared">
+                        <sinkhole loc="shared"/>
+                      </action>
+                      <packet-capture loc="shared">disable</packet-capture>
+                    </entry>
+                  </lists>
+                  <dns-security-categories loc="shared">
+                    <entry name="pan-dns-sec-cc" loc="shared">
+                      <log-level loc="shared">default</log-level>
+                      <action loc="shared">default</action>
+                      <packet-capture loc="shared">disable</packet-capture>
+                    </entry>
+                    <entry name="pan-dns-sec-ddns" loc="shared">
+                      <log-level loc="shared">default</log-level>
+                      <action loc="shared">default</action>
+                      <packet-capture loc="shared">disable</packet-capture>
+                    </entry>
+                    <entry name="pan-dns-sec-grayware" loc="shared">
+                      <log-level loc="shared">default</log-level>
+                      <action loc="shared">default</action>
+                      <packet-capture loc="shared">disable</packet-capture>
+                    </entry>
+                    <entry name="pan-dns-sec-malware" loc="shared">
+                      <log-level loc="shared">default</log-level>
+                      <action loc="shared">default</action>
+                      <packet-capture loc="shared">disable</packet-capture>
+                    </entry>
+                    <entry name="pan-dns-sec-parked" loc="shared">
+                      <log-level loc="shared">default</log-level>
+                      <action loc="shared">default</action>
+                      <packet-capture loc="shared">disable</packet-capture>
+                    </entry>
+                    <entry name="pan-dns-sec-phishing" loc="shared">
+                      <log-level loc="shared">default</log-level>
+                      <action loc="shared">default</action>
+                      <packet-capture loc="shared">disable</packet-capture>
+                    </entry>
+                    <entry name="pan-dns-sec-proxy" loc="shared">
+                      <log-level loc="shared">default</log-level>
+                      <action loc="shared">default</action>
+                      <packet-capture loc="shared">disable</packet-capture>
+                    </entry>
+                    <entry name="pan-dns-sec-recent" loc="shared">
+                      <log-level loc="shared">default</log-level>
+                      <action loc="shared">default</action>
+                      <packet-capture loc="shared">disable</packet-capture>
+                    </entry>
+                  </dns-security-categories>
+                  <sinkhole loc="shared">
+                    <ipv4-address loc="shared">pan-sinkhole-default-ip</ipv4-address>
+                    <ipv6-address loc="shared">::1</ipv6-address>
+                  </sinkhole>
+                </botnet-domains>
+                <rules loc="shared">
+                  <entry name="critical" loc="shared">
+                    <action loc="shared">
+                      <default loc="shared"/>
+                    </action>
+                    <severity loc="shared">
+                      <member loc="shared">critical</member>
+                      <member loc="shared">high</member>
+                    </severity>
+                    <threat-name loc="shared">any</threat-name>
+                    <category loc="shared">any</category>
+                    <packet-capture loc="shared">disable</packet-capture>
+                  </entry>
+                </rules>
+                <mica-engine-spyware-enabled loc="shared">
+                  <entry name="HTTP Command and Control detector" loc="shared">
+                    <inline-policy-action loc="shared">alert</inline-policy-action>
+                  </entry>
+                  <entry name="HTTP2 Command and Control detector" loc="shared">
+                    <inline-policy-action loc="shared">alert</inline-policy-action>
+                  </entry>
+                  <entry name="SSL Command and Control detector" loc="shared">
+                    <inline-policy-action loc="shared">alert</inline-policy-action>
+                  </entry>
+                  <entry name="Unknown-TCP Command and Control detector" loc="shared">
+                    <inline-policy-action loc="shared">alert</inline-policy-action>
+                  </entry>
+                  <entry name="Unknown-UDP Command and Control detector" loc="shared">
+                    <inline-policy-action loc="shared">alert</inline-policy-action>
+                  </entry>
+                </mica-engine-spyware-enabled>
+              </entry>
+            </spyware>
+            <vulnerability/>
+            <url-filtering>
+              <entry name="Outbound-URL" loc="shared">
+                <credential-enforcement loc="shared">
+                  <mode loc="shared">
+                    <disabled loc="shared"/>
+                  </mode>
+                  <log-severity loc="shared">medium</log-severity>
+                  <block loc="shared">
+                    <member loc="shared">grayware</member>
+                    <member loc="shared">hacking</member>
+                    <member loc="shared">malware</member>
+                    <member loc="shared">phishing</member>
+                    <member loc="shared">private-ip-addresses</member>
+                  </block>
+                </credential-enforcement>
+                <block loc="shared">
+                  <member loc="shared">grayware</member>
+                  <member loc="shared">hacking</member>
+                  <member loc="shared">malware</member>
+                  <member loc="shared">phishing</member>
+                  <member loc="shared">private-ip-addresses</member>
+                </block>
+              </entry>
+            </url-filtering>
+            <custom-url-category/>
+            <file-blocking/>
+            <data-filtering/>
+            <data-objects/>
+            <hip-profiles/>
+            <dos-protection/>
+            <decryption/>
+            <wildfire-analysis/>
+            <gtp/>
+          </profiles>
+        </entry>
+      </vsys>
+      <deviceconfig>
+        <system>
+          <type>
+            <dhcp-client>
+              <send-hostname>yes</send-hostname>
+              <send-client-id>no</send-client-id>
+              <accept-dhcp-hostname>no</accept-dhcp-hostname>
+              <accept-dhcp-domain>no</accept-dhcp-domain>
+            </dhcp-client>
+          </type>
+          <update-server>updates.paloaltonetworks.com</update-server>
+          <update-schedule>
+            <threats>
+              <recurring>
+                <weekly>
+                  <day-of-week>wednesday</day-of-week>
+                  <at>01:02</at>
+                  <action>download-only</action>
+                </weekly>
+              </recurring>
+            </threats>
+          </update-schedule>
+          <timezone>US/Pacific</timezone>
+          <service>
+            <disable-telnet>yes</disable-telnet>
+            <disable-http>yes</disable-http>
+          </service>
+          <hostname>qwikLABS-vmseries01</hostname>
+          <panorama>
+            <local-panorama/>
+          </panorama>
+        </system>
+        <setting>
+          <config>
+            <rematch>yes</rematch>
+          </config>
+          <management>
+            <hostname-type-in-syslog>FQDN</hostname-type-in-syslog>
+            <initcfg/>
+          </management>
+        </setting>
+      </deviceconfig>
+    </entry>
+  </devices>
+  <shared>
+    <content-preview>
+      <application>
+        <entry id="10839" minver="8.1.0" name="brightsign-media-player" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>ics-protocols</subcategory>
+          <technology>client-server</technology>
+          <description>BrightSign LLC, the global market leader in digital signage media players. BrightSign designs media players and provides free software and cloud networking solutions for the commercial digital signage market. This App-ID covers traffic from the BrightSign digital media player.</description>
+          <appident>yes</appident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <can-disable>yes</can-disable>
+          <new-appid>yes</new-appid>
+          <references>
+            <entry name="BrightSign">
+              <link>https://www.brightsign.biz/</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/443</member>
+              <member>tcp/80</member>
+            </port>
+          </default>
+          <use-applications>
+            <member>web-browsing</member>
+          </use-applications>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10837" minver="8.1.0" name="compx-lockview" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>ics-protocols</subcategory>
+          <technology>client-server</technology>
+          <description>The CompX eLock is a device that provides access control with audit trail capabilities and/or temperature monitoring for a variety of applications, such as for drug and supply cabinets, refrigerators and freezers, key control cabinets, tool storage, or evidence lockers. LockView software provides overall management of CompX eLocks. This App-ID covers the traffic between CompX eLocks and LockView servers.</description>
+          <appident>yes</appident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>no</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <new-appid>yes</new-appid>
+          <references>
+            <entry name="CompX eLock">
+              <link>http://compxelock.com/what_is_elock.html</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/4308</member>
+            </port>
+          </default>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10845" minver="8.1.0" name="dahua-p2p" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>ics-protocols</subcategory>
+          <technology>peer-to-peer</technology>
+          <description>Dahua Technology provides video surveillance products and services. This App-ID covers the p2p protocol traffic of Dahua camera, DVR, and NVR equipment.</description>
+          <appident>yes</appident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <can-disable>yes</can-disable>
+          <new-appid>yes</new-appid>
+          <tag minver="9.1.0">
+            <member>[Web App]</member>
+          </tag>
+          <references>
+            <entry name="Dahuawiki Page">
+              <link>https://dahuawiki.com/Mobile/Easy4IP_Mobile_P2P_Setup</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/35000,37777</member>
+            </port>
+          </default>
+          <use-applications>
+            <member>web-browsing</member>
+          </use-applications>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10834" minver="8.1.0" name="esii-terminal" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>ics-protocols</subcategory>
+          <technology>client-server</technology>
+          <description>ESII produces touchscreen terminals that let you manage your queues, and thus organize your customers/patient flows according to your needs. This App-ID covers the traffic between ESII terminals and client devices.</description>
+          <alg>yes</alg>
+          <appident>yes</appident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>no</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <decode>iot</decode>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <references>
+            <entry name="ESII">
+              <link>https://www.esii.com/en/page/products</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/dynamic</member>
+            </port>
+          </default>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10824" minver="8.1.0" name="galaxy-gateway-service" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>management</subcategory>
+          <technology>client-server</technology>
+          <description>Galaxy Control Systems is a global leader in the access control industry. The GCS Client Gateway Service handles messaging between the SG client software and the GCS Communication Service. This App-ID covers event log traffic from the GCS Gateway Service to the System Galaxy Software Application running on a monitoring server.</description>
+          <appident>yes</appident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>no</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <references>
+            <entry name="Galaxy Access Control">
+              <link>https://www.galaxysys.com/</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/4002</member>
+            </port>
+          </default>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10828" minver="8.1.0" name="google-photos-downloading" ori_country="USA" ori_language="English">
+          <category>saas</category>
+          <subcategory>photo-video</subcategory>
+          <technology>client-server</technology>
+          <description>Google Photos is a photograph and video sharing and storage service by Google. This App-ID covers the downloading traffic in google-photos.</description>
+          <appident>yes</appident>
+          <virus-ident>yes</virus-ident>
+          <spyware-ident>yes</spyware-ident>
+          <file-type-ident>yes</file-type-ident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>yes</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>yes</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <data-ident>yes</data-ident>
+          <cachable>no</cachable>
+          <file-forward>yes</file-forward>
+          <can-disable>yes</can-disable>
+          <is-saas>yes</is-saas>
+          <saas minver="8.1.0">
+            <certifications>
+              <is-hipaa>yes</is-hipaa>
+              <is-soc2>yes</is-soc2>
+            </certifications>
+            <is-data-breaches>no</is-data-breaches>
+            <is-ip-based-restrictions>no</is-ip-based-restrictions>
+            <is-poor-financial-viability>no</is-poor-financial-viability>
+            <is-poor-terms-of-service>no</is-poor-terms-of-service>
+          </saas>
+          <tag minver="9.1.0">
+            <member>[Web App]</member>
+          </tag>
+          <references>
+            <entry name="Google Photos Home page">
+              <link>https://www.google.com/photos/about/</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications minver="5.0.0">
+            <member minver="5.0.0">google-photos-base</member>
+          </use-applications>
+          <tunnel-applications minver="3.1.0">
+            <member minver="3.1.0">ctd-dummy</member>
+          </tunnel-applications>
+          <risk>3</risk>
+          <parent-app>google-photos-base</parent-app>
+          <preview>yes</preview>
+        </entry>
+        <entry id="2327" minver="5.0.0" name="google-photos-base" ori_country="USA" ori_language="English">
+          <ottawa-name>google-photos</ottawa-name>
+          <category>saas</category>
+          <subcategory>photo-video</subcategory>
+          <technology>browser-based</technology>
+          <description>Google Photos is a photograph and video sharing and storage service by Google. It was announced in May 2015 and spun out from Google+,  the company's social network. Google Photos replaces what was earlier called Google Picasa.</description>
+          <appident>yes</appident>
+          <virus-ident>yes</virus-ident>
+          <spyware-ident>yes</spyware-ident>
+          <file-type-ident>yes</file-type-ident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>yes</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>yes</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <data-ident>yes</data-ident>
+          <cachable>no</cachable>
+          <file-forward>yes</file-forward>
+          <can-disable>yes</can-disable>
+          <is-saas>yes</is-saas>
+          <saas minver="8.1.0">
+            <certifications>
+              <is-hipaa>yes</is-hipaa>
+              <is-soc2>yes</is-soc2>
+            </certifications>
+            <is-data-breaches>no</is-data-breaches>
+            <is-ip-based-restrictions>no</is-ip-based-restrictions>
+            <is-poor-financial-viability>no</is-poor-financial-viability>
+            <is-poor-terms-of-service>no</is-poor-terms-of-service>
+          </saas>
+          <tag minver="9.1.0">
+            <member>[Web App]</member>
+          </tag>
+          <references>
+            <entry name="Wikipedia">
+              <link>https://en.wikipedia.org/wiki/Google_Photos</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications minver="3.0.0">
+            <member minver="3.0.0">google-base</member>
+          </use-applications>
+          <tunnel-applications minver="8.1.0">
+            <member minver="8.1.0">google-photos-downloading</member>
+            <member minver="8.1.0">google-photos-sharing</member>
+            <member minver="8.1.0">google-photos-uploading</member>
+          </tunnel-applications>
+          <applicable-decoders>
+            <member>http</member>
+          </applicable-decoders>
+          <risk>3</risk>
+          <application-container>google-photos</application-container>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10829" minver="8.1.0" name="google-photos-sharing" ori_country="USA" ori_language="English">
+          <category>saas</category>
+          <subcategory>photo-video</subcategory>
+          <technology>client-server</technology>
+          <description>Google Photos is a photograph and video sharing and storage service by Google. This App-ID covers the sharing traffic in google-photos.</description>
+          <appident>yes</appident>
+          <virus-ident>yes</virus-ident>
+          <spyware-ident>yes</spyware-ident>
+          <file-type-ident>yes</file-type-ident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>yes</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>yes</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <data-ident>yes</data-ident>
+          <cachable>no</cachable>
+          <file-forward>yes</file-forward>
+          <can-disable>yes</can-disable>
+          <is-saas>yes</is-saas>
+          <saas minver="8.1.0">
+            <certifications>
+              <is-hipaa>yes</is-hipaa>
+              <is-soc2>yes</is-soc2>
+            </certifications>
+            <is-data-breaches>no</is-data-breaches>
+            <is-ip-based-restrictions>no</is-ip-based-restrictions>
+            <is-poor-financial-viability>no</is-poor-financial-viability>
+            <is-poor-terms-of-service>no</is-poor-terms-of-service>
+          </saas>
+          <tag minver="9.1.0">
+            <member>[Web App]</member>
+          </tag>
+          <references>
+            <entry name="Google Photos Home page">
+              <link>https://www.google.com/photos/about/</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications minver="5.0.0">
+            <member minver="5.0.0">google-photos-base</member>
+          </use-applications>
+          <tunnel-applications minver="3.1.0">
+            <member minver="3.1.0">ctd-dummy</member>
+          </tunnel-applications>
+          <risk>3</risk>
+          <parent-app>google-photos-base</parent-app>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10827" minver="8.1.0" name="google-photos-uploading" ori_country="USA" ori_language="English">
+          <category>saas</category>
+          <subcategory>photo-video</subcategory>
+          <technology>client-server</technology>
+          <description>Google Photos is a photograph and video sharing and storage service by Google. This App-ID covers the uploading traffic in google-photos.</description>
+          <appident>yes</appident>
+          <virus-ident>yes</virus-ident>
+          <spyware-ident>yes</spyware-ident>
+          <file-type-ident>yes</file-type-ident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>yes</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>yes</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <data-ident>yes</data-ident>
+          <cachable>no</cachable>
+          <file-forward>yes</file-forward>
+          <can-disable>yes</can-disable>
+          <is-saas>yes</is-saas>
+          <saas minver="8.1.0">
+            <certifications>
+              <is-hipaa>yes</is-hipaa>
+              <is-soc2>yes</is-soc2>
+            </certifications>
+            <is-data-breaches>no</is-data-breaches>
+            <is-ip-based-restrictions>no</is-ip-based-restrictions>
+            <is-poor-financial-viability>no</is-poor-financial-viability>
+            <is-poor-terms-of-service>no</is-poor-terms-of-service>
+          </saas>
+          <tag minver="9.1.0">
+            <member>[Web App]</member>
+          </tag>
+          <references>
+            <entry name="Google Photos Home page">
+              <link>https://www.google.com/photos/about/</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications minver="5.0.0">
+            <member minver="5.0.0">google-photos-base</member>
+          </use-applications>
+          <tunnel-applications minver="3.1.0">
+            <member minver="3.1.0">ctd-dummy</member>
+          </tunnel-applications>
+          <risk>3</risk>
+          <parent-app>google-photos-base</parent-app>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10846" minver="8.1.0" name="nintendo-conntest" ori_country="USA" ori_language="English">
+          <category>media</category>
+          <subcategory>gaming</subcategory>
+          <technology>client-server</technology>
+          <description>Nintendo video game consoles communicate to this host to check internet status when connected to a Wi-Fi network. This App-ID covers the traffic for nintendo-conntest application.</description>
+          <appident>yes</appident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <can-disable>yes</can-disable>
+          <new-appid>yes</new-appid>
+          <references>
+            <entry name="Nintendo Switch">
+              <link>https://www.nintendo.com/switch/system/</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications>
+            <member>web-browsing</member>
+          </use-applications>
+          <implicit-use-applications>
+            <member>web-browsing</member>
+          </implicit-use-applications>
+          <risk>1</risk>
+          <parent-app>web20_parrent_app</parent-app>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10825" minver="8.1.0" name="packer" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>management</subcategory>
+          <technology>client-server</technology>
+          <description>Packer is an open source tool that enables you to create identical machine images for multiple platforms from a single source template. This App-ID covers the traffic for Packer application.</description>
+          <appident>yes</appident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <can-disable>yes</can-disable>
+          <references>
+            <entry name="Packer">
+              <link>https://www.packer.io/</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications>
+            <member>ssl</member>
+            <member>web-browsing</member>
+          </use-applications>
+          <implicit-use-applications>
+            <member>ssl</member>
+            <member>web-browsing</member>
+          </implicit-use-applications>
+          <risk>1</risk>
+          <parent-app>github-base</parent-app>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10836" minver="8.1.0" name="paloalto-aurl-idl" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>general-business</subcategory>
+          <technology>client-server</technology>
+          <description>Palo Alto Networks Advanced URL Filtering utilizes the Inline Deep Learning service to provide real time analysis of web content to detect and prevent never before seen web based attacks. This App-ID covers the traffic from the firewall to the AURL cloud service.</description>
+          <appident>yes</appident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>no</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <breaks-decryption>yes</breaks-decryption>
+          <can-disable>yes</can-disable>
+          <tag minver="9.1.0">
+            <member>[Palo Alto Networks]</member>
+          </tag>
+          <references>
+            <entry name="Palo Alto Networks AURL  Inline Deep Learning">
+              <link>https://www.paloaltonetworks.com/network-security/advanced-url-filtering</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/443</member>
+            </port>
+          </default>
+          <use-applications>
+            <member>ssl</member>
+          </use-applications>
+          <implicit-use-applications>
+            <member>ssl</member>
+          </implicit-use-applications>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10811" minver="8.1.0" name="paloalto-pa-acs" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>general-business</subcategory>
+          <technology>client-server</technology>
+          <description>Prisma Access Auth Cache Service (ACS) is used by Prisma Access Explicit proxy for authentication purposes. Explicit Proxy checks for the presence and validity of auth cookie. If the cookie is not present or is invalid, the user is redirected to ACS. After ACS confirms the authentication of the user, the user is redirected back to the explicit proxy. This App-ID covers the traffic of Prisma Access Auth Cache Service.</description>
+          <appident>yes</appident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>no</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <can-disable>yes</can-disable>
+          <new-appid>yes</new-appid>
+          <tag minver="9.1.0">
+            <member>[Palo Alto Networks]</member>
+          </tag>
+          <default>
+            <port>
+              <member>tcp/443</member>
+            </port>
+          </default>
+          <use-applications>
+            <member>ssl</member>
+          </use-applications>
+          <implicit-use-applications>
+            <member>ssl</member>
+          </implicit-use-applications>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10826" minver="8.1.0" name="paramount-plus" ori_country="USA" ori_language="English">
+          <category>media</category>
+          <subcategory>photo-video</subcategory>
+          <technology>browser-based</technology>
+          <description>Paramount+ is an American subscription video on-demand over-the-top streaming service owned and operated by ViacomCBS Streaming, a division of ViacomCBS. This App-ID covers the traffic for Paramount+ application.</description>
+          <appident>yes</appident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>yes</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>yes</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <can-disable>yes</can-disable>
+          <tag minver="9.1.0">
+            <member>[Entertainment Video]</member>
+            <member>[Web App]</member>
+          </tag>
+          <references>
+            <entry name="Paramount+">
+              <link>https://www.paramountplus.com/</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications>
+            <member minver="3.0.0">cbs-video</member>
+            <member minver="3.0.0">google-base</member>
+            <member>http-video</member>
+            <member>ssl</member>
+            <member>web-browsing</member>
+            <member minver="5.0.0">youtube-streaming</member>
+          </use-applications>
+          <risk>2</risk>
+          <parent-app>cbs-video</parent-app>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10833" minver="8.1.0" name="pointsix-manager-protocol" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>ics-protocols</subcategory>
+          <technology>client-server</technology>
+          <description>The pointsix-manager-protocol is used by PointSix Link and Point Managers. The Link and Point Managers use this protocol to collect data from PointSix Point Sensors. This App-ID covers communication from Link and Point managers to Point Sensors.</description>
+          <alg>yes</alg>
+          <appident>yes</appident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>no</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <decode>iot</decode>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <references>
+            <entry name="PointSix Wireless">
+              <link>http://www.pointsix.com/index.html</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/dynamic</member>
+            </port>
+          </default>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10835" minver="8.1.0" name="rdsci-datatron-ext" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>ics-protocols</subcategory>
+          <technology>client-server</technology>
+          <description>The Datatron EXT Environmental Monitoring System has been specifically designed to monitor environmental variables such as temperature of refrigerators, freezers, incubators, storage rooms, test chambers, LN2 tanks, ovens and real world condition such as humidity, Pressure and CO2. This App-ID covers communication between the monitoring sensors and the application server.</description>
+          <appident>yes</appident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>no</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <references>
+            <entry name="R&amp;amp;D Scientific">
+              <link>http://www.rdsci.com/</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/dynamic</member>
+            </port>
+          </default>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10832" minver="8.1.0" name="tresorit-downloading" ori_country="USA" ori_language="English">
+          <category>saas</category>
+          <subcategory>storage-backup</subcategory>
+          <technology>client-server</technology>
+          <description>Tresorit is an online cloud storage service based in Switzerland and Hungary that emphasizes enhanced security and data encryption for businesses. This App-ID covers the downloading traffic for Tresorit app.</description>
+          <appident>yes</appident>
+          <spyware-ident>yes</spyware-ident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>yes</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <breaks-decryption>yes</breaks-decryption>
+          <can-disable>yes</can-disable>
+          <is-saas>yes</is-saas>
+          <saas minver="8.1.0">
+            <is-data-breaches>no</is-data-breaches>
+            <is-ip-based-restrictions>no</is-ip-based-restrictions>
+            <is-poor-financial-viability>no</is-poor-financial-viability>
+            <is-poor-terms-of-service>no</is-poor-terms-of-service>
+          </saas>
+          <references>
+            <entry name="Wikipedia">
+              <link>https://en.wikipedia.org/wiki/Tresorit</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications minver="5.0.0">
+            <member minver="5.0.0">tresorit-base</member>
+          </use-applications>
+          <risk>2</risk>
+          <parent-app>tresorit-base</parent-app>
+          <preview>yes</preview>
+        </entry>
+        <entry id="2698" minver="5.0.0" name="tresorit-base" ori_country="USA" ori_language="English">
+          <ottawa-name>tresorit</ottawa-name>
+          <category>saas</category>
+          <subcategory>storage-backup</subcategory>
+          <technology>client-server</technology>
+          <description>Tresorit is an online cloud storage service based in Switzerland and Hungary that emphasizes enhanced security and data encryption for businesses.</description>
+          <appident>yes</appident>
+          <spyware-ident>yes</spyware-ident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>yes</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <breaks-decryption>yes</breaks-decryption>
+          <can-disable>yes</can-disable>
+          <is-saas>yes</is-saas>
+          <saas minver="8.1.0">
+            <is-data-breaches>no</is-data-breaches>
+            <is-ip-based-restrictions>no</is-ip-based-restrictions>
+            <is-poor-financial-viability>no</is-poor-financial-viability>
+            <is-poor-terms-of-service>no</is-poor-terms-of-service>
+          </saas>
+          <references>
+            <entry name="Wikipedia">
+              <link>https://en.wikipedia.org/wiki/Tresorit</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications>
+            <member>ssl</member>
+            <member>web-browsing</member>
+          </use-applications>
+          <tunnel-applications minver="8.1.0">
+            <member minver="8.1.0">tresorit-downloading</member>
+            <member minver="8.1.0">tresorit-uploading</member>
+          </tunnel-applications>
+          <applicable-decoders>
+            <member>http</member>
+            <member>ssl</member>
+          </applicable-decoders>
+          <risk>2</risk>
+          <application-container>tresorit</application-container>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10831" minver="8.1.0" name="tresorit-uploading" ori_country="USA" ori_language="English">
+          <category>saas</category>
+          <subcategory>storage-backup</subcategory>
+          <technology>client-server</technology>
+          <description>Tresorit is an online cloud storage service based in Switzerland and Hungary that emphasizes enhanced security and data encryption for businesses. This App-ID covers the uploading traffic for Tresorit app.</description>
+          <appident>yes</appident>
+          <spyware-ident>yes</spyware-ident>
+          <vulnerability-ident>yes</vulnerability-ident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>yes</able-to-transfer-file>
+          <has-known-vulnerability>yes</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <breaks-decryption>yes</breaks-decryption>
+          <can-disable>yes</can-disable>
+          <is-saas>yes</is-saas>
+          <saas minver="8.1.0">
+            <is-data-breaches>no</is-data-breaches>
+            <is-ip-based-restrictions>no</is-ip-based-restrictions>
+            <is-poor-financial-viability>no</is-poor-financial-viability>
+            <is-poor-terms-of-service>no</is-poor-terms-of-service>
+          </saas>
+          <references>
+            <entry name="Wikipedia">
+              <link>https://en.wikipedia.org/wiki/Tresorit</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/80,443</member>
+            </port>
+          </default>
+          <use-applications minver="5.0.0">
+            <member minver="5.0.0">tresorit-base</member>
+          </use-applications>
+          <risk>2</risk>
+          <parent-app>tresorit-base</parent-app>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10830" minver="8.1.0" name="tyco-access" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>ics-protocols</subcategory>
+          <technology>client-server</technology>
+          <description>Tyco's access control solutions serve a wide range of security use cases, from standalone buildings to complex global enterprises, as well as provide cyber resiliency, business efficiency, and intelligence. This App-ID covers the traffic between client devices and Tyco access controllers.</description>
+          <appident>yes</appident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>no</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <deny-action>drop-reset</deny-action>
+          <cachable>no</cachable>
+          <references>
+            <entry name="Tyco Access Control">
+              <link>https://www.tyco.com/access-control</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>tcp/2800</member>
+            </port>
+          </default>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+        <entry id="10838" minver="8.1.0" name="vocera-badge" ori_country="USA" ori_language="English">
+          <category>business-systems</category>
+          <subcategory>medical</subcategory>
+          <technology>client-server</technology>
+          <description>Vocera badge is a wearable piece of technology that helps healthcare workers effectively communicate with each other. Just press a button and say the name of a person, role, or group to reach the right person in the right place at the right time. Quickly locate colleagues and summon help in an emergency. Mobilise code teams immediately. This App-ID covers the signaling traffic between Vocera badge and Vocera servers.</description>
+          <alg>yes</alg>
+          <appident>yes</appident>
+          <evasive-behavior>no</evasive-behavior>
+          <consume-big-bandwidth>no</consume-big-bandwidth>
+          <used-by-malware>no</used-by-malware>
+          <able-to-transfer-file>no</able-to-transfer-file>
+          <has-known-vulnerability>no</has-known-vulnerability>
+          <tunnel-other-application>no</tunnel-other-application>
+          <prone-to-misuse>no</prone-to-misuse>
+          <pervasive-use>no</pervasive-use>
+          <per-direction-regex>no</per-direction-regex>
+          <decode>medical</decode>
+          <deny-action>drop</deny-action>
+          <cachable>no</cachable>
+          <new-appid>yes</new-appid>
+          <references>
+            <entry name="Vocera">
+              <link>https://www.vocera.com/product/vocera-badge</link>
+            </entry>
+          </references>
+          <default>
+            <port>
+              <member>udp/5002</member>
+            </port>
+          </default>
+          <risk>1</risk>
+          <preview>yes</preview>
+        </entry>
+      </application>
+      <application-type>
+        <category/>
+        <technology/>
+      </application-type>
+    </content-preview>
+    <application/>
+    <application-group/>
+    <service/>
+    <service-group/>
+    <botnet>
+      <configuration>
+        <http>
+          <dynamic-dns>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </dynamic-dns>
+          <malware-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </malware-sites>
+          <recent-domains>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </recent-domains>
+          <ip-domains>
+            <enabled>yes</enabled>
+            <threshold>10</threshold>
+          </ip-domains>
+          <executables-from-unknown-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </executables-from-unknown-sites>
+        </http>
+        <other-applications>
+          <irc>yes</irc>
+        </other-applications>
+        <unknown-applications>
+          <unknown-tcp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-tcp>
+          <unknown-udp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-udp>
+        </unknown-applications>
+      </configuration>
+      <report>
+        <topn>100</topn>
+        <scheduled>yes</scheduled>
+      </report>
+    </botnet>
+    <log-settings/>
+  </shared>
+  <mgt-config>
+    <users>
+      <entry name="admin">
+        <phash>$5$abmptklx$UQFWsmo6yjNlKaSXMuHIagNgOpqAqh0zX/uUDceoic1</phash>
+        <permissions>
+          <role-based>
+            <superuser>yes</superuser>
+          </role-based>
+        </permissions>
+        <public-key>c3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFEVzlZcVo1YmFvVG9PMWpIUURwRFhDNjh2ZHViWlVjWCttU2cwclBKQUVBV2xVeHFZd3FJcUkrUTJnRlQ5VHZ2Vys5V1Q3NzNITDJRdkkvdGVQS2djOXA2MHFBdG1QYXZwQlcycjE2bThBRHFUSE1LbHdUQnFoT3BHanFzMmlOMVVzN042cW8wNHlRWkZyeExBNHowQUYvQTdOQTBOeTBacWk4aXpienVVUEZIUHRFMWJiQUZyU0ZFU1hWL0oxWW9VK05GRkZKZ01xNXBJTDErUVc3cmVVTk9zclM4Zmw0KzFmN0dhQ01uRFhlTU5BWTB3QS9JR2kzWEczYmNwVEpObDZ5NTk2OEY1OE5VQ1JlSk92V0RFeXE2UHN1Nk1wbE5pLzFyTHJkYmxva1N3eTFEMlV2VWpFcDkzSXBsVFFSTEhCKzBSUyt2d1YzejR0MmFCdlRscWogcXdpa0xBQlMtTDE4MDU1LTI2NTg0Cg==</public-key>
+      </entry>
+    </users>
+    <password-complexity>
+      <enabled>yes</enabled>
+      <minimum-length>8</minimum-length>
+    </password-complexity>
+  </mgt-config>
+</config>
