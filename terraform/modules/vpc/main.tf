@@ -172,7 +172,7 @@ resource "aws_instance" "this" {
 
   ami                         = data.aws_ami.latest_ecs.id
   instance_type               = each.value.instance_type
-  user_data                   = file("${path.module}/${each.value.setup-file}")
+  user_data                   = file("${path.module}/../${each.value.setup-file}")
   key_name                    = data.aws_key_pair.key_name.key_name
   network_interface {
     network_interface_id = local.eni-ids["${var.prefix-name-tag}${each.value.name}-primary-interface"]
